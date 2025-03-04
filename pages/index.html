@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>مدرسة سمرة بن جندب الابتدائية</title>
+    <link rel="icon-home" href="/images/logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <i class="fas fa-school"></i>
+                <span>مدرسة سمرة بن جندب</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home">الرئيسية</a>
+                <a href="/pages/about.html">عن المدرسة</a>
+                <a href="/pages/program.html">البرامج</a>
+                <a href="login.html">تسجيل الدخول </a>
+                <button class="dark-mode-toggle" id="darkModeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="mobile-menu-icon">
+                <i class="fas fa-bars"></i> <!-- أيقونة القائمة للهواتف -->
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>نرحب بكم في بيت العلم الثاني</h1>
+            <p>نُعِدُّ جيلاً واعياً مبدعاً لقيادة المستقبل</p>
+            <div class="top-students" id="topStudents">
+                <!-- أسماء المتفوقين تظهر هنا -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <h2>عن مدرستنا</h2>
+        <div class="about-content">
+            <p>تأسست مدرسة سمرة بن جندب عام 1995 كمؤسسة تعليمية رائدة تهدف إلى تنمية مهارات الطلاب العلمية والعملية، نسعى لتقديم تعليم متميز يجمع بين الأصالة والحداثة في إطار قيمي راسخ.</p>
+        </div>
+    </section>
+
+    <section class="section" id="programs">
+        <h2>برامجنا التعليمية</h2>
+        <div class="programs-grid">
+            <div class="program-card" onclick="toggleDetails(this)">
+                <h3>التميز العلمي</h3>
+                <p>برامج متقدمة في العلوم والرياضيات مع معامل مجهزة بأحدث التقنيات</p>
+                <div class="program-details">
+                    <p>تفاصيل إضافية عن برنامج التميز العلمي...</p>
+                </div>
+            </div>
+            <div class="program-card" onclick="toggleDetails(this)">
+                <h3>الإبداع الفني</h3>
+                <p>ورش عمل فنية ومهارات إبداعية لتنمية المواهب</p>
+                <div class="program-details">
+                    <p>تفاصيل إضافية عن برنامج الإبداع الفني...</p>
+                </div>
+            </div>
+            <div class="program-card" onclick="toggleDetails(this)">
+                <h3>الرياضة المدرسية</h3>
+                <p>أنشطة رياضية متنوعة تحت إشراف مدربين متخصصين</p>
+                <div class="program-details">
+                    <p>تفاصيل إضافية عن برنامج الرياضة المدرسية...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="counters section">
+
+        <div class="">
+            <div class="label">طالب</div>
+            <div class="number counter-up-item">8000</div>
+        </div>
+        <div>
+            <div class="label">أستاذ</div>
+            <div class="number counter-up-item">1000</div>
+        </div>
+        <div>
+            <div class="label">شعبة</div>
+            <div class="number counter-up-item">500</div>
+        </div>
+        <script>
+            function animateValue(obj, start, end, duration) {
+                let startTimestamp = null
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1)
+                    obj.innerHTML = Math.floor(progress * (end - start) + start)
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step)
+                    }
+                }
+                window.requestAnimationFrame(step)
+            }
+
+            const obj = document.getElementsByClassName("counter-up-item")
+            console.log(obj)
+
+            for (let index = 0; index < obj.length; index++) {
+                const element = obj[index]
+                animateValue(element, 0, element.innerText, 5000)
+            }
+        </script>
+    </div>
+
+
+    <section class="section testimonial-section">
+        <h2>آراء أولياء الأمور</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <p>"مدرسة رائعة تقدم تعليماً ممتازاً، طفلي سعيد جداً!"</p>
+                <div class="name">أحمد سعيد</div>
+            </div>
+            <div class="testimonial">
+                <p>"بيئة تعليمية محفزة وداعمة، أنصح بها بشدة."</p>
+                <div class="name">فاطمة محمد</div>
+            </div>
+            <div class="testimonial">
+                <p>"المدرسة تهتم بتطوير المهارات الأكاديمية والاجتماعية."</p>
+                <div class="name">خالد يوسف</div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section contact-section">
+        <h2>إذا كان لديك أي سؤال فلا تتردد في التواصل معنا</h2>
+        <div class="social-icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.9980843820543!2d36.71897161501745!3d34.72065158042616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15241e5c6e3b8c2d%3A0x23a3e5f5c3e5e6f8!2sAl%20Ghouta%2C%20Homs%2C%20Syria!5e0!3m2!1sen!2s!4v1708363620313!5m2!1sen!2s" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+    <div class="contact-page section" id="contactPage">
+        <div class="contact-form">
+            <h2>اتصل بنا</h2>
+            <input type="text" id="userName" placeholder="الاسم">
+            <input type="email" id="userEmail" placeholder="البريد الإلكتروني">
+            <textarea id="userMessage" placeholder="رسالتك"></textarea>
+            <button onclick="sendMessage()">إرسال</button>
+            <div class="success-message" id="contactSuccess"></div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>Company</h2>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Brand Center</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Help Center</h2>
+                <ul>
+                    <li><a href="#">Discord Server</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Legal</h2>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Licensing</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Download</h2>
+                <ul>
+                    <li><a href="#">iOS</a></li>
+                    <li><a href="#">Android</a></li>
+                    <li><a href="#">Windows</a></li>
+                    <li><a href="#">MacOS</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 جميع الحقوق محفوظة للمدرسة
+        </div>
+    </footer>
+
+
+    <div class="student-page" id="studentPage">
+        <div class="student-form">
+            <h2>إضافة طالب جديد</h2>
+            <input type="text" id="studentName" placeholder="اسم الطالب">
+            <input type="number" id="studentGrade" placeholder="العلامة">
+            <input type="text" id="studentId" placeholder="هوية الطالب">
+            <input type="date" id="studentDob" placeholder="تاريخ الميلاد">
+            <input type="text" id="studentAddress" placeholder="مكان السكن">
+            <input type="tel" id="studentPhone" placeholder="رقم الهاتف">
+            <button onclick="addStudent()">إضافة طالب</button>
+        </div>
+        <table class="students-table" id="studentsTable">
+            <thead>
+                <tr>
+                    <th>اسم الطالب</th>
+                    <th>العلامة</th>
+                    <th>الهوية</th>
+                    <th>الميلاد</th>
+                    <th>مكان السكن</th>
+                    <th>رقم الهاتف</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- بيانات الطلاب تظهر هنا -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
