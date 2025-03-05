@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عن المدرسة</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="aboutcss.css"> 
+    <link rel="stylesheet" href="aboutcss.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="header">
         <nav class="nav-container">
@@ -20,19 +22,67 @@
                 <a href="index.html">الرئيسية</a>
                 <a href="about.html">عن المدرسة</a>
                 <a href="program.html">البرامج</a>
-                <a href="contant.html">تواصل معنا</a>
+                <a href="login.html">تسجيل الدخول </a>
                 <button class="dark-mode-toggle" id="darkModeToggle">
                     <i class="fas fa-moon"></i>
                 </button>
             </div>
+            <div class="mobile-menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </header>
-    <main>
-        <section class="about">
-            <h1>عن مدرستنا</h1>
-            <p>تأسست مدرسة سمرة بن جندب عام 1995 كمؤسسة تعليمية رائدة تهدف إلى تنمية مهارات الطلاب العلمية والعملية، نسعى لتقديم تعليم متميز يجمع بين الأصالة والحداثة في إطار قيمي راسخ.</p>
-        </section>
-    </main>
+
+
+    <div class="about">
+        <h1>عن مدرستنا</h1>
+        <p>تأسست مدرسة سمرة بن جندب عام 1995 كمؤسسة تعليمية رائدة تهدف إلى تنمية مهارات الطلاب العلمية والعملية، نسعى لتقديم تعليم متميز يجمع بين الأصالة والحداثة في إطار قيمي راسخ.</p>
+    </div>
+
+    <h2 style="text-align:center">فريقنا</h2>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="/images/profile-image.png" alt="Jane" style="width:100%">
+                <div class="container">
+                    <h2>Jane Doe</h2>
+                    <p class="title">CEO & Founder</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>jane@example.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="/images/profile-image.png" alt="Mike" style="width:100%">
+                <div class="container">
+                    <h2>Mike Ross</h2>
+                    <p class="title">Art Director</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>mike@example.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="/images/profile-image.png" alt="John" style="width:100%">
+                <div class="container">
+                    <h2>John Doe</h2>
+                    <p class="title">Designer</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>john@example.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="aboutjs.js"></script> <!-- ربط ملف JavaScript -->
+    <script src="script.js"></script>
+
 </body>
+
 </html>
