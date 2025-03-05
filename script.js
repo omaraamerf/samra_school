@@ -122,12 +122,12 @@ function showTopStudents() {
 }
 
 setInterval(showTopStudents, 3000)
-const mobileMenuIcon = document.getElementsByClassName('mobile-menu-icon')
-for (const item of mobileMenuIcon) {
-    item.addEventListener('click', () => {
-        navLinks.classList.toggle('active')
-    })
-}
-const navLinks = document.querySelector('.nav-links')
+// const mobileMenuIcon = document.getElementsByClassName('mobile-menu-icon')
+// for (const item of mobileMenuIcon) {
+//     item.addEventListener('click', () => {
+//         navLinks.classList.toggle('active')
+//     })
+// }
+// const navLinks = document.querySelector('.nav-links')
 
 
